@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroIA - Tu Asistente Agrícola Inteligente</title>
+    <meta name="description" content="Diagnostica plagas, consulta el calendario lunar y optimiza tus cultivos con Inteligencia Artificial.">
+    
+    <!-- Fuente Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS Integrados -->
+    <style>
+        :root {
+            --primary: #2E7D32; /* Verde AgroIA */
+            --accent: #FFD700;  /* Dorado Luna */
+            --dark: #1B5E20;
+            --text: #333;
+            --light: #f4fdf4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+
+        /* Header */
+        header {
+            background: var(--dark);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1625246333195-58197bd47d19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-download {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, background 0.3s;
+            display: inline-block;
+            border: 2px solid white;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Features */
+        .features {
+            padding: 5rem 10%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            padding: 2rem;
+            border-radius: 15px;
+            background: var(--light);
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header>
+        <nav>
+            <a href="#" class="logo">🌿 AgroIA</a>
+        </nav>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cultiva con Inteligencia</h1>
+            <p>Diagnostica enfermedades, consulta el calendario lunar y recibe alertas climáticas. Todo en una sola App.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.agroia.app" class="btn-download">
+                Descargar en Google Play
+            </a>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section class="features">
+        <h2 class="section-title">¿Qué puedes hacer con AgroIA?</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="icon">🔍</span>
+                <h3>Diagnóstico IA</h3>
+                <p>Identifica plagas y enfermedades en segundos tomando una foto de tus plantas.</p>
+            </div>
+            <div class="card">
+                <span class="icon">🌙</span>
+                <h3>Consejo Lunar</h3>
+                <p>Sabe exactamente cuándo sembrar, podar o cosechar según la fase lunar.</p>
+            </div>
+            <div class="card">
+                <span class="icon">🌦️</span>
+                <h3>Clima Inteligente</h3>
+                <p>Recibe alertas meteorológicas y recomendaciones de riego personalizadas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Legal -->
+    <footer>
+        <p>&copy; 2025 AgroIA. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos de Uso</a>
+            <!-- Enlace importante para AdMob -->
+            <a href="app-ads.txt" style="opacity: 0.5;">app-ads.txt</a>
+        </div>
+    </footer>
+
+</body>
+</html>
